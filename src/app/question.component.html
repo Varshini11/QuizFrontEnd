@@ -1,7 +1,7 @@
 <mat-card>
   <mat-card-title>
-    <span *ngIf="question.Id">Edit Question</span>
-    <span *ngIf="!question.Id">New Question</span>
+    <span *ngIf="question.quizId">Edit Question</span>
+    <span *ngIf="!question.quizId">New Question</span>
   </mat-card-title>
     <mat-card-content>
       <form>
@@ -23,9 +23,9 @@
         </form>
     </mat-card-content>
     <mat-card-actions>
-        <button *ngIf="question.id" (click)="api.putQuestion(question)" mat-button>EDIT</button>
-        <button *ngIf="question.id" (click)="question = {}" mat-button>NEW</button>
-        <button *ngIf="!question.id" (click)="post(question)" mat-button>POST</button>
+        <button *ngIf="question.quizId" (click)="api.putQuestion(question)" mat-button>EDIT</button>
+        <button *ngIf="question.quizId" (click)="question = {}" mat-button>NEW</button>
+        <button *ngIf="!question.quizId" (click)="post(question)" mat-button>POST</button>
     </mat-card-actions>
   </mat-card>
   <questions></questions>

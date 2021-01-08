@@ -18,19 +18,18 @@ import {HomeComponent} from './home.component';
 import {NavComponent} from './nav.component';
 import {QuizComponent} from './quiz.component'
 import {QuizzesComponent} from './quizzes.component'
-import {RegisterComponent} from './register.component'
+//import {RegisterComponent} from './register.component'
 import { AppRoutingModule } from './app-routing.module';
 const routes =[
   {path: '', component:HomeComponent},
   {path: 'question', component:QuestionComponent},
   {path: 'question/:quizId', component:QuestionComponent},
-  {path: 'register', component:RegisterComponent},
   {path: 'quiz', component:QuizComponent}
 ]
 @NgModule({
   declarations: [
     AppComponent, QuestionComponent, QuestionsComponent, 
-    HomeComponent, NavComponent,QuizComponent,QuizzesComponent, RegisterComponent,
+    HomeComponent, NavComponent,QuizComponent,QuizzesComponent,
   ],
   imports: [
     BrowserModule, HttpClientModule,RouterModule.forRoot(routes),

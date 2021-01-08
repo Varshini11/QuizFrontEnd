@@ -9,12 +9,13 @@ import {HttpClient} from '@angular/common/http'
     templateUrl: './question.component.html'
 })
 export class QuestionComponent { 
-    question={}
+    question: any;
     quizId
     constructor (private api: ApiService, private route: ActivatedRoute){}
+
     ngOnInit(){
         this.quizId= this.route.snapshot.paramMap.get('quizId')
-        this.api.questionSelected.subscribe(question=> this.question= question)
+        this.api.questionSelected.subscribe(question=> this.question = question)
     }
    
    post(question) {

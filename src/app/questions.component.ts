@@ -1,8 +1,8 @@
-import { Template } from '@angular/compiler/src/render3/r3_ast'
-import { analyzeAndValidateNgModules } from '@angular/compiler'
+// import { Template } from '@angular/compiler/src/render3/r3_ast'
+// import { analyzeAndValidateNgModules } from '@angular/compiler'
+// import {HttpClient} from '@angular/common/http'
 import { Component } from '@angular/core'
 import { ApiService } from './api.service';
-import {HttpClient} from '@angular/common/http'
 import { ActivatedRoute } from '@angular/router';
 @Component({
     selector: 'questions',
@@ -18,8 +18,4 @@ export class QuestionsComponent {
             this.questions = res
         })
     }
-
-//    post(question) {
-//        this.api.postQuestion(question)
-//     }
 }
